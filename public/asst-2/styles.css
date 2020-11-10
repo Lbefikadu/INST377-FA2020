@@ -3,30 +3,16 @@ h1 {
 }
 
 body {
-  background: #006377;
+  background: #9a97be;
   font-size: 1em;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.header {
-  color: #fff;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  margin-bottom: 5px;
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-family: "Montserrat", sans-serif;
 }
 
 h1 {
   margin: 20px 50px;
   padding: 0 20px;
   min-height: 75px;
-  background-color: #0097b2;
+  background-color: #9ad3db;
   color: white;
   display: flex;
 
@@ -39,65 +25,51 @@ h1 {
   border-radius: 4px;
 }
 
-.container2 li {
-  border-bottom: 1px solid rgba(34, 193, 195, 1);
+.container {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.column {
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+#container2 {
+  color: rgb(208, 208, 208);
+  padding: 0px 0px 1em;
+}
+
+#container2 ul {
+  width: 300px;
+  list-style: none;
   margin: 0px;
+  padding: 0px;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+}
+
+#container2 li {
+  border-bottom: 1px solid rgba(34, 193, 195, 1);
+  margin: 10px;
   padding: 10px;
   border-radius: 3px;
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(9, 9, 121, 1) 49%,
-    rgba(0, 212, 255, 1) 100%
-  );
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,102,121,1) 35%, rgba(0,212,255,1) 100%);
 }
 
-.text_input {
-  width: 400px;
-  height: 50px;
-  font-size: 1.2em;
-  border: 1px solid black;
-}
-
-/* centers objects */
-.filteredcases {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-}
-
-/* column(S) movement forced */
-.rest_list {
-  flex-direction: column;
-  list-style: none;
-  width: auto;
-}
-
-/* name moves to left side*/
-.name {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-}
-
-.address {
-  display: flex;
-  justify-content: center;
-  align-self: center;
-  font-style: italic;
-}
-
-/* uniformity among objects */
-.rest_list > li {
-  width: 500px;
-  height: auto;
-  margin: 2%;
-  background: rgb(208, 208, 208);
-  background: linear-gradient(
-    90deg,
-    rgba(208, 208, 208, 1) 0%,
-    rgb(39, 187, 10) 45%,
-    rgb(116, 226, 14) 100%
-  );
+span.name {
+  font-weight: 700;
+  font-size: 16px;
 }

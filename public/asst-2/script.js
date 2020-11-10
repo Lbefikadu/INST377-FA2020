@@ -1,3 +1,4 @@
+// https://www.youtube.com/watch?v=y4gZMJKAeWs&list=PLu8EoSxDXHP6CGK4YVJhL_VWetA865GOH&index=6
 const restaurants = [];
 
 function findMatches(wordToMatch, restaurants) {
@@ -7,9 +8,9 @@ function findMatches(wordToMatch, restaurants) {
   });
 }
 
-function displayMatches(i, restaurants) {
-  const matchArray = findMatches(i.target.value, restaurants);
-  const html = matchArray.map((place) => `
+function displayMatches(e, restaurants) {
+  const matchArray = findMatches(e.target.value, restaurants);
+  let html = matchArray.map((place) => `
       <li>
         <span class="name">${place.name}</span><br>
         <span class="population">${place.category}</span><br>
@@ -19,6 +20,9 @@ function displayMatches(i, restaurants) {
       </li>
       
     `).join('');
+  if (e.target.value.length == 0) {
+    html = [];
+  }
   return html;
 }
 async function main() {
@@ -26,12 +30,7 @@ async function main() {
   const json = await data.json();
   const searchInput = document.querySelector('.search');
 
-  searchInput.addEventListener('change', (e) => {
-    const target = document.querySelector('.suggestions');
-    const makelist = displayMatches(e, json);
-    target.innerHTML = makelist;
-  });
-  searchInput.addEventListener('keyup', (e) => {
+  searchInput.addEventListener('input', (e) => {
     const target = document.querySelector('.suggestions');
     const makelist = displayMatches(e, json);
     target.innerHTML = makelist;
