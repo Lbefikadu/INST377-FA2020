@@ -14,9 +14,9 @@ function displayMatches(e, restaurants) {
       <li>
         <span class="name">${place.name}</span><br>
         <span class="population">${place.category}</span><br>
-        <span class="address">${place.address_line_1}</span><br>
-        <span class="city">${place.city}</span><br>
-        <span class="zip">${place.zip}</span><br>
+        <address>${place.address_line_1}<br>
+        ${place.city}<br>
+        ${place.zip}</address>
       </li>
       
     `).join('');
